@@ -1,10 +1,4 @@
-await liff.init({liffId:"1656631126-wg1J4QWV"})
-
-switch(liff.getOS()){
-  case "android":document.body.style.backgroundColor = "green";break
-  case "ios":document.body.style.backgroundColor = "pink";break
-  case "web":document.body.style.backgroundColor ="black";break
-}
+main();
 
 async function getProfile(){
   let profile = await liff.getProfile()
@@ -15,6 +9,11 @@ async function getProfile(){
 }
 
 async function main(){
-
+  await liff.init({liffId:"1656631126-wg1J4QWV"})
+  switch(liff.getOS()){
+    case "android":document.body.style.backgroundColor = "green";break
+    case "ios":document.body.style.backgroundColor = "pink";break
+    case "web":document.body.style.backgroundColor ="black";break
+  }
   getProfile();
 }
